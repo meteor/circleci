@@ -1,4 +1,4 @@
-FROM circleci/android:api-27-node8-alpha
+FROM circleci/android:api-27-node
 RUN sudo apt-get update && sudo apt-get install -y \
   gradle gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
   libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 \
