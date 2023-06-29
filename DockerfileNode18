@@ -16,4 +16,4 @@ RUN sudo apt-get update && sudo apt-get install -y \
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install $NODE_VERSION  \
   && nvm use $NODE_VERSION \
   && nvm alias default $NODE_VERSION \
-  && n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
+  && n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local; rm -rf /home/circleci/project/*
