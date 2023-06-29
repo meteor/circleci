@@ -2,11 +2,11 @@
 
 ## Building Docker image for NodeJS version 14
 ```bash
-docker build . -t meteor/circleci
+docker build -t meteor/circleci .
 ```
 ## Building Docker image for NodeJS version 18
 ```bash
-docker build -f DockerfileNode18 . -t meteor/circleci
+docker build -f DockerfileNode18 -t meteor/circleci:android-30-node-18 .
 ```
 
 ## Publishing `latest` Docker tag
