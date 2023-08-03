@@ -4,7 +4,7 @@ ENV NODE_VERSION 18.16.0
 ENV NVM_DIR ~/.nvm/
 
 #ENV GRADLE_VERSION=7.6
-#ENV PATH /usr/local/gradle-${GRADLE_VERSION}/bin:$PATH
+ENV PATH /usr/local/gradle-${GRADLE_VERSION}/bin:$PATH
 #RUN URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
 #	curl -sSL -o /tmp/gradle.zip $URL && \
 #	sudo unzip -d /usr/local /tmp/gradle.zip && \
