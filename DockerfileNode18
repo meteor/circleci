@@ -1,14 +1,14 @@
-FROM cimg/android:2023.03.1-node
+FROM cimg/android:2023.08.1-node
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ENV NODE_VERSION 18.16.0
 ENV NVM_DIR ~/.nvm/
 
-ENV GRADLE_VERSION=7.6
-ENV PATH /usr/local/gradle-${GRADLE_VERSION}/bin:$PATH
-RUN URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
-	curl -sSL -o /tmp/gradle.zip $URL && \
-	sudo unzip -d /usr/local /tmp/gradle.zip && \
-	rm -rf /tmp/gradle.zip
+#ENV GRADLE_VERSION=7.6
+#ENV PATH /usr/local/gradle-${GRADLE_VERSION}/bin:$PATH
+#RUN URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+#	curl -sSL -o /tmp/gradle.zip $URL && \
+#	sudo unzip -d /usr/local /tmp/gradle.zip && \
+#	rm -rf /tmp/gradle.zip
 
 RUN sudo apt-get update && sudo apt-get install -y \
   gradle gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
