@@ -1,9 +1,10 @@
-FROM cimg/android:2023.08.1-node
+FROM cimg/android:2023.03.1-node
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ENV NODE_VERSION 18.16.0
 ENV NVM_DIR ~/.nvm/
 
 #ENV GRADLE_VERSION=7.6
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH /usr/local/gradle-${GRADLE_VERSION}/bin:$PATH
 #RUN URL=https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
 #	curl -sSL -o /tmp/gradle.zip $URL && \
