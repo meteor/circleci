@@ -1,1 +1,0 @@
-Write-Host "Branch Name: $env:BRANCH_NAME"
