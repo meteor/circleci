@@ -1,4 +1,4 @@
-name: My GitHub Actions Workflow
+name: Test Actions Workflow
 
 on:
   workflow_dispatch:
