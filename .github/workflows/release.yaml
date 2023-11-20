@@ -1,0 +1,21 @@
+name: My GitHub Actions Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Branch name to build'
+        required: true
+
+
+jobs:
+  windows-build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run PowerShell Script
+        run: ./.github/scripts/echo-branch.ps1
+        with:
+          branch-name: "${{ github.event.inputs.branch_name }}"
