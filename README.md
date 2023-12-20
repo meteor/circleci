@@ -8,6 +8,7 @@ docker build -t meteor/circleci .
 ```bash
 docker build -f DockerfileNode18 -t meteor/circleci:android-30-node-18 .
 ```
+> latest image created: circleci:2023.12.1-android-34-node-18
 
 ## Publishing `latest` Docker tag
 ```bash
