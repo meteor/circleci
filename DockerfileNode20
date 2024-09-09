@@ -24,7 +24,7 @@ RUN sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/j
 RUN curl -s "https://get.sdkman.io" | bash && \
     source "/home/circleci/.sdkman/bin/sdkman-init.sh" && \
     sdk install gradle 8.7 && \
-    echo 'export PATH="/usr/local/gradle-8.7/bin:${PATH}"' >> /home/circleci/.bashrc
+    echo 'export PATH="/usr/local/gradle/8.7/bin:${PATH}"' >> /home/circleci/.bashrc
 
 
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install $NODE_VERSION  \
