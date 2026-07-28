@@ -1,7 +1,7 @@
 FROM cimg/android:2025.04.1-node
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-ENV NODE_VERSION 22.17.0
-ENV NVM_DIR ~/.nvm/
+ENV NODE_VERSION=24.15.0
+ENV NVM_DIR=~/.nvm/
 
 RUN sudo apt-get update && sudo apt-get install -y \
   gradle gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
@@ -19,6 +19,10 @@ ENV JRE_HOME=${JDK_HOME}
 
 # Updating default java version to be used
 RUN sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+
+# Cordova requires the final Android 36.0.0 build-tools release. The base image
+# only includes the 36.0.0-rc5 preview.
+RUN sdkmanager --install "build-tools;36.0.0"
 
 # Installing gradle
 RUN curl -s "https://get.sdkman.io" | bash && \
